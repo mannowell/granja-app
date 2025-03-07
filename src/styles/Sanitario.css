@@ -1,0 +1,294 @@
+.registro-sanitario {
+  padding: 20px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  position: relative;
+}
+
+.tab:hover {
+  color: #3498db;
+}
+
+.tab.active {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3498db;
+}
+
+/* Lista de Registros */
+.registros-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  padding: 15px;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+}
+
+.list-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Status */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pendente {
+  background-color: #fef5e7;
+  color: #f39c12;
+}
+
+.status-em_andamento {
+  background-color: #edf7ff;
+  color: #3498db;
+}
+
+.status-concluido {
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+/* Tipo */
+.tipo {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.tipo-vacinacao {
+  background-color: #edf7ff;
+  color: #3498db;
+}
+
+.tipo-tratamento {
+  background-color: #fef5e7;
+  color: #f39c12;
+}
+
+.tipo-prevencao {
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: transparent;
+  color: #666;
+}
+
+.btn-icon:hover {
+  background-color: #f5f5f5;
+}
+
+.btn-edit:hover {
+  color: #3498db;
+}
+
+.btn-delete:hover {
+  color: #e74c3c;
+}
+
+.btn-complete:hover {
+  color: #2ecc71;
+}
+
+.btn-revert:hover {
+  color: #f39c12;
+}
+
+/* Tooltip nos botões */
+.btn-icon {
+  position: relative;
+}
+
+.btn-icon:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Modal e Form */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button[type="button"] {
+  background-color: #e0e0e0;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Detalhes do Registro */
+.registro-details {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.details-section {
+  margin-bottom: 20px;
+}
+
+.details-section h4 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.details-item {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.details-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.details-value {
+  font-weight: 500;
+  color: #2c3e50;
+} 

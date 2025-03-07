@@ -1,0 +1,158 @@
+.pavilhoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.pavilhao-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-left: 4px solid transparent;
+}
+
+.pavilhao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pavilhao-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  background-color: #f8f9fa;
+}
+
+.status-disponivel {
+  border-left-color: #2ecc71;
+}
+
+.status-ocupado {
+  border-left-color: #3498db;
+}
+
+.status-manutencao {
+  border-left-color: #e74c3c;
+}
+
+.lote-info {
+  margin-top: 15px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  padding: 4px 0;
+}
+
+.info-row span {
+  color: #666;
+}
+
+.info-row strong {
+  color: #2c3e50;
+}
+
+.pavilhao-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+.btn-add-lote {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-add-lote:hover {
+  background-color: #2980b9;
+}
+
+.status-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.pavilhao-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-finalizar,
+.btn-manutencao,
+.btn-disponivel {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.btn-finalizar {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-finalizar:hover {
+  background-color: #219a52;
+}
+
+.btn-manutencao {
+  background-color: #f1c40f;
+  color: #2c3e50;
+}
+
+.btn-manutencao:hover {
+  background-color: #f39c12;
+}
+
+.btn-disponivel {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-disponivel:hover {
+  background-color: #27ae60;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pavilhao-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+} 

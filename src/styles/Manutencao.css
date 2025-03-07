@@ -1,0 +1,182 @@
+.manutencao {
+  padding: 20px;
+}
+
+/* Lista de Tarefas */
+.manutencao-list {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 0.8fr 0.8fr 1fr;
+  padding: 15px;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 0.8fr 0.8fr 1fr;
+  padding: 15px;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+}
+
+.list-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Prioridades */
+.prioridade {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.prioridade-baixa {
+  background-color: #e8f8f5;
+  color: #27ae60;
+}
+
+.prioridade-media {
+  background-color: #fef5e7;
+  color: #f39c12;
+}
+
+.prioridade-alta {
+  background-color: #fdeaea;
+  color: #e74c3c;
+}
+
+/* Status */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-pendente {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.status-em_andamento {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-finalizada {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-atrasada {
+  background-color: #fdecea;
+  color: #d32f2f;
+}
+
+/* Ações */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-finalizar {
+  background-color: #27ae60 !important;
+  color: white;
+}
+
+/* Modal e Form */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 500px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions button[type="button"] {
+  background-color: #e0e0e0;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Reutilize os estilos do Sanitario.css para os elementos comuns */ 
